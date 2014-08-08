@@ -1,0 +1,65 @@
+/*esta es la forma para agregar fuentes que allamos descargado*/
+
+@font-face { 
+	font-family: boongaloo;
+	 src: url(../fonts/Boogaloo/Boogaloo-Regular.ttf) ;
+	 
+	}
+
+	@font-face { 
+	font-family: day-one;
+	 src: url(../fonts/Days_One/DaysOne-Regular.ttf) ;
+	 
+	}
+
+	@font-face { 
+	font-family: naruto;
+	 src: url(../fonts/naruto/njnaruto.ttf) ;
+	 
+	}
+
+
+	@font-face { 
+	font-family: full_bleed;
+	 src: url(../fonts/full-bled/FullBleedBB_ital.ttf) ;
+	 
+	}
+
+	@font-face { 
+	font-family: fredoka;
+	 src: url(../fonts/fredoka_one/fredokaOne-Regular.ttf) ;
+	 
+	}
+
+	@font-face { 
+	font-family: tachado;
+	 src: url(../fonts/tachado/SaucerBB.ttf) ;
+	 
+	}
+
+
+	@font-face { 
+	font-family: varela;
+	 src: url(../fonts/Varela_Round/VarelaRound-Regular.ttf) ;
+	 
+	}
+
+
+	@font-face { 
+	font-family: ashcan;
+	 src: url(../fonts/ashcan/ashcanbb_bold.ttf) ;
+	 
+	}
+
+	@font-face { 
+	font-family: federo;
+	 src: url(../fonts/federo/Federo_Regular.ttf) ;
+	 
+	}
+
+
+	@font-face { 
+	font-family: pizzadude;
+	 src: url(../fonts/pizzadude/justadream_solid.ttf) ;
+	 
+	}

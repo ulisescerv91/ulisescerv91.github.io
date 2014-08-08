@@ -1,0 +1,318 @@
+		body{
+			 width: 99%;
+			 height: 645px;
+			 background: linear-gradient(0deg,#f3ec3f,white,white);
+			 background-repeat: no-repeat;
+
+		}
+
+		#titulo1{
+
+			
+			font-family: day-one;
+			font-size: 1em;
+			height: 2em;
+
+			
+			
+		}
+
+		#titulo2{
+
+			background-color: #d0f931;
+			border-top-left-radius:1em;
+			border-top-right-radius:1em;
+			text-shadow: 5px 5px 5px #FF0000;
+			font-family: full_bleed;
+			color: #0aaad3;
+			font-size: 4em;
+			
+			margin-top: 0em;
+			padding-top: .2em;
+			width: 100%;
+
+
+		}
+/*///////////////////////////////////////////////////////////////////////////////////*/
+	#menu{
+
+			color: black;
+			background-color: #d0f931;
+			margin-top:-4em;
+
+			height: 1.5em;
+			height: 2em;
+
+		}
+
+		#jugar{
+			margin-left: 37%;
+
+
+		}
+
+		#ver_reglas{
+			
+			margin-left: 3em;
+			
+		
+		}
+		.botones{
+			color: black;
+			font-family: tachado;
+			text-shadow: 2px 2px 2px white;
+			font-size: 2em;
+			height: .7em;
+			width: 6em;
+			border-radius: .5em;
+			text-align: center;
+			padding-top: 5px;
+
+
+		}
+
+		.botones:hover{
+			border-color: black;
+			border-style: solid;
+			border-width: 2px;
+			background-color: white;
+			transition:.4s;
+		}
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+		#opcionesdiv{
+			margin-left: 25%;
+		}
+	
+		
+		.opciones{
+
+			height: 7em;
+			width: 7em;
+			border-radius:4em; 
+			border-width: 5px;
+			border-color: white;
+			border-style: solid;
+			  transition: width .5s, height .5s, transform .5s, border-color .5s;
+			  margin-left: 1em;
+			opacity: 0.0	;
+			float: left;
+		}
+
+
+		.opciones:hover{
+			opacity: 1.0;
+			border-width: 5px;
+			
+			border-style: solid;
+			/*position: fixed
+			/*width: 7.5em;*/
+    		height: 7.5em;
+    		-webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+		    transform: rotate(10deg);
+		    transition: width .5s, height .5s, transform .5s, border-color .5s;
+		    /*box-shadow:0px 0px 4px 4px black;*/
+
+
+		}
+			#img_reglas{
+			
+			
+			border-radius: 13em;
+			height: 25em;
+			width: 25em;
+			margin-left: -20em;
+			background-color: #6ddcf8;
+			box-shadow:0px 3px 0px 0px black;
+		}
+		#piedra{
+			
+			margin-top: -9.3em;
+			margin-left: 23em;
+			border-color: #ff8a8a;
+		}
+		#papel{
+		
+			border-color: yellow;
+			margin-top: -19em;
+			margin-left: 26em;
+			
+		}
+
+		#tijeras{
+			
+			border-color: purple;
+			margin-top: -24.5em;
+			margin-left: 17.8em;
+				}
+
+		#lagarto{
+			border-color: green;
+			margin-top: -9.2em;
+			margin-left: 13em;
+					
+				}
+
+		#spock{
+			border-color: blue;
+			margin-top: -19em;
+			margin-left: 10em;
+				}
+
+			#l_piedra{
+
+			margin-top: -2em;
+			margin-left: 25em;	
+
+			}
+			#l_papel{
+				margin-top: -14em;
+			margin-left:28em;
+			}
+			#l_tijeras{
+				margin-top: -19em;
+			margin-left: 21em;
+				
+			}
+			#l_lagarto{
+				margin-top: -3.2em;
+			margin-left: 5em;
+			}
+			#l_spock{
+				margin-top: -14em;
+			margin-left: 4em;
+				
+			}
+			.etiquetas{
+				opacity: 0.0;
+				position: absolute;
+				font-family: ashcan;
+				font-size: 20px;
+			}
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+
+	#sheldon{
+		font-family: varela;
+		font-family: 24px;
+		font-size: 35px;
+		font-weight: bold;
+	}
+
+	#elige{
+		font-family: varela;
+		font-family: 24px;
+		font-size: 30px;
+		font-weight: bold;
+		margin-left: -9em;
+	}
+
+	#again{
+		font-size: 35px;
+		border-width: 7px;
+		border-style: solid;
+		border-color: #ee2e20;
+		border-radius: 2em;
+		background-color: black;
+		color: white;
+		font-family: pizzadude;
+		
+		margin-top: -4.7em;
+		margin-left: 15.4em;
+		text-align: center;
+		position: absolute;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		width: 8em;
+
+
+	}
+	#again:hover{
+
+		box-shadow:0px 0px 8px 8px black;
+	}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+
+			#vs{
+			width: 100%;
+			position: absolute;
+			padding-top: 3em;
+			
+			}
+
+			.resul{
+				position: absolute;
+				box-shadow:2px 5px 2px 5px black;
+			}
+
+
+
+		
+
+		#tu{
+			margin-left: 2em;
+			font-family: varela;
+			font-size: 35px;
+			
+
+		}
+		#pc{
+			margin-left: 10em;
+			font-family: varela;
+			font-size: 35px;
+			
+		}
+
+		#vs_img{
+			margin-left: -4em;
+			position: absolute;
+			height: 10em;
+			width: 8em;
+		}
+
+		#opc_user{
+			margin-left: 420px;
+
+		}
+		#opc_pc{
+			margin-left: 65em;
+			opacity: 0.1;	
+		}
+
+		#opc_user,#opc_pc{
+			position: absolute;
+			
+			border-radius: 4em;
+			height: 7em;
+			width: 7em;
+		}
+		/*//////////////////////////////////////////////////*/
+		#resultado{
+
+			background-color: black;
+			text-align: center;
+			width: 15em;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-weight: bold;
+			font-size: 35px;
+			color:white;
+			/*esta fuente esta en fonts.css*/
+			font-family: federo;
+			margin-top: 11em;
+			width: 100%;
+			
+		}
+
+		#img_sheldon{
+			opacity: 0.0;
+			margin-left: 956px;
+			height: 20em;
+			border-top-left-radius:4em;
+		}
+
