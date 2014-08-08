@@ -1,4 +1,4 @@
-		body{
+			body{
 			 width: 99%;
 			 height: 645px;
 			 background: linear-gradient(0deg,#f3ec3f,white,white);
@@ -47,6 +47,7 @@
 
 		#jugar{
 			margin-left: 37%;
+			
 
 
 		}
@@ -54,11 +55,13 @@
 		#ver_reglas{
 			
 			margin-left: 3em;
+
 			
 		
 		}
 		.botones{
 			color: black;
+			cursor:pointer
 			font-family: tachado;
 			text-shadow: 2px 2px 2px white;
 			font-size: 2em;
@@ -76,6 +79,7 @@
 			border-style: solid;
 			border-width: 2px;
 			background-color: white;
+			cursor:pointer
 			transition:.4s;
 		}
 
@@ -101,6 +105,7 @@
 
 
 		.opciones:hover{
+			cursor:pointer
 			opacity: 1.0;
 			border-width: 5px;
 			
@@ -211,6 +216,7 @@
 	}
 
 	#again{
+		cursor:pointer
 		font-size: 35px;
 		border-width: 7px;
 		border-style: solid;
