@@ -61,7 +61,7 @@
 		}
 		.botones{
 			color: black;
-			cursor:pointer
+			cursor:pointer;
 			font-family: tachado;
 			text-shadow: 2px 2px 2px white;
 			font-size: 2em;
@@ -79,7 +79,7 @@
 			border-style: solid;
 			border-width: 2px;
 			background-color: white;
-			cursor:pointer
+			cursor:pointer;
 			transition:.4s;
 		}
 
@@ -105,7 +105,7 @@
 
 
 		.opciones:hover{
-			cursor:pointer
+			cursor:pointer;
 			opacity: 1.0;
 			border-width: 5px;
 			
@@ -216,7 +216,7 @@
 	}
 
 	#again{
-		cursor:pointer
+		cursor:pointer;
 		font-size: 35px;
 		border-width: 7px;
 		border-style: solid;
