@@ -1,62 +1,375 @@
-<!DOCTYPE html>	
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script  src="js/miniplay.js"></script>
-	
-	<title>Minu-Juego</title>
-	
-<link rel="stylesheet" type="text/css" href="css/estilo.css">
-<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	
+  <meta charset="UTF-8">
+ <!--  <meta name="viewport"content"width=device-width initial-
+scale=1 maximum-scale=1" > ESTA ES LA OPCION DE MEJORANDO-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> <!--http://www.genbetadev.com/desarrollo-web/responsive-design-estructura-adaptable INFO AQUI-->
+  <title>5to aniversario</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/pagina_js.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="css/font.css">
+
+  <!--CODIGOS PARA SLIDER>-->
+    
+    <!-- Jssor Slider End -->
+    <!--CODIGOS PARA SLIDER>-->
+     <!-- it works the same with all jquery version from 1.x to 2.x -->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
+    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.core.js"></script>
+    <script type="text/javascript" src="js/jssor.utils.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+
 </head>
-
 <body>
-	<div id="colores"></div>
-	<a href="https://github.com/ulisescerv91/" target="_blank"  id="titulo1">BY: Ulises_cervantes</a>
-	<center><p id="titulo2">Piedra - Papel-Tijeras-Lagarto-Spock</p></center>
-	<div id="menu"><span class="botones" id="jugar" type="button">jugar</span><span class="botones" id="ver_reglas">reglas</span></div>
-	
+  <header>
 
-	<div id="opcionesdiv">
-		<center><p id="elige">Selecciona una opcion:</p></center>
-		<center><img src="pictures/reglas.PNG" id="img_reglas"><br></center>
-		<img id="piedra"class="opciones" onclick="jugar(0)"  src="pictures/Piedra.PNG" title="Piedra">
-		<img  id="papel"class="opciones" onclick="jugar(1)" src="pictures/Papel.PNG" title="Papel">
-		<img id="tijeras" class="opciones"  onclick="jugar(2)"src="pictures/Tijeras.PNG" title="tijera">
-		<img id="lagarto" class="opciones"  onclick="jugar(3)"src="pictures/Lagarto.PNG" title="lagarto">
-		<img id="spock" class="opciones"  onclick="jugar(4)" src="pictures/Spock.PNG"title="Spock">
-		<label id="l_piedra" class="etiquetas">piedra</label>
-		<label id="l_papel" class="etiquetas">papel</label>
-		<label id="l_tijeras" class="etiquetas">tijeras</label>
-		<label id="l_lagarto" class="etiquetas">lagarto</label>
-		<label id="l_spock" class="etiquetas">spock</label>
-	
+    <figure class="logo">
+      <img src="imagenes/5to.png" alt="5to">
+    </figure>
+    <div class="titulo">
+      <img src="imagenes/amor.png" alt="logo" class="titulotxt">
+    </div>  
+    <figure class="imgmenu" id="imgmenu"alt="VER MENU" tittle="menu">
+        <img src="imagenes/menus.png">
+    </figure>
+
+  </header>
+
+<!--INICIO SLIDER-->
+
+ <script>
+        jQuery(document).ready(function ($) {
+
+           
+            var _CaptionTransitions = [];
+            _CaptionTransitions["L"] = { $Duration: 900, $FlyDirection: 1, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $ScaleHorizontal: 0.6, $Opacity: 2 };
+            _CaptionTransitions["R"] = { $Duration: 900, $FlyDirection: 2, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $ScaleHorizontal: 0.6, $Opacity: 2 };
+            _CaptionTransitions["T"] = { $Duration: 900, $FlyDirection: 4, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $ScaleVertical: 0.6, $Opacity: 2 };
+            _CaptionTransitions["B"] = { $Duration: 900, $FlyDirection: 8, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $ScaleVertical: 0.6, $Opacity: 2 };
+            _CaptionTransitions["RTTL|BR"] = { $Duration: 900, $Zoom: 11, $Rotate: 1, $FlyDirection: 10, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Zoom: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInCubic }, $ScaleHorizontal: 0.6, $ScaleVertical: 0.6, $Opacity: 2, $Round: { $Rotate: 0.8} };
+            _CaptionTransitions["MCLIP|R"] = { $Duration: 900, $Clip: 2, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic} };
+         
+
+            var options = {
+                $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 2000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                //$SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
+                $SlideDuration: 800,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0,                                   //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                },
+
+                $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 8,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 8,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
+
+                $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var bodyWidth = document.body.clientWidth;
+                if (bodyWidth)
+                    jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 1920));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $(window).bind('resize', ScaleSlider);
+            }
 
 
-	</div>
-	<div id="divreglas">
-		<center><p id="sheldon">Reglas segun Sheldon Cooper</p></center>
-		<center><iframe id="video" width="560" height="315" src="//www.youtube.com/embed/S5eLybE03gc" frameborder="0" allowfullscreen></iframe></center>
-	</div>
+            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            //    $(window).bind("orientationchange", ScaleSlider);
+            //}
+            //responsive code end
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="ulises">
+    <div id="slider1_container" style="position: relative; margin: 0 auto;
+        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; background url('../imagenes/red_fondo.jpg'; box-shadow: 5px 5px 10px rgba( white ,1); z-index: 1;) ">
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+                top: 0px; left: 0px; width: 100%; height: 100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px; width: 100%; height: 100%;">
+            </div>
+        </div>
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: pointer; position: absolute; left: 12%; top: 0px; width: 1000px;
+            height: 500px; overflow: hidden; border-radius: 15%; border: 2px groove black;" >
 
-	<div id="vs">
-		<center><span id="tu">Tu</span><span id="pc">Sheldon</span></center>
-		<center><img src="pictures/vs.png" id="vs_img"></center>
-		<img  class="resul" id="opc_user"src="">
-		<img class="resul" id="opc_pc" src="">
-		<img src=""  id="img_sheldon"><br>
-		<span id="again">JUGAR DE NUEVO!!</span>
-	</div>
-	<p id="resultado"></p>
+            <div>
+                <img u="image" src="img/1920/a1.jpg"/>
+                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
+                
+                </div>
+                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
+                    
+                </div>
+                
+            </div>
+            <div>
+                <img u="image" src="img/1920/a2.jpg" />
+                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
+                
+                </div>
+                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
+                    
+                </div>
+            
+            </div>
+            <div>
+                <img u="image" src="img/1920/a3.jpg" />
+                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
+                
+                </div>
+                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
+                    
+                </div>
+                
+            </div>
+            <div>
+                <img u="image" src="img/1920/a4.jpg" />
+                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
+                
+                </div>
+                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
+                    
+                </div>
+                
+            </div>
+             <div>
+                <img u="image" src="img/1920/a5.jpg" />
+                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
+                
+                </div>
+                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
+                    
+                </div>
+                
+            </div>
+  
+            <!-- Example to add fixed static share buttons in slider BEGIN -->
+            <!-- Remove it if no need -->
+            <!-- Share Button Styles -->
+            
+
+            <!-- Example to add fixed static share buttons in slider BEGIN -->
+            <!-- Remove it if no need -->
+       
+            <!-- Example to add fixed static share buttons in slider END -->
+        </div>
+                
+        <!-- Bullet Navigator Skin Begin -->
+        <style>
+            /* jssor slider bullet navigator skin 21 css */
+            /*
+            .jssorb21 div           (normal)
+            .jssorb21 div:hover     (normal mouseover)
+            .jssorb21 .av           (active)
+            .jssorb21 .av:hover     (active mouseover)
+            .jssorb21 .dn           (mousedown)
+            */
+            .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av
+            {
+                background: url(img/b21.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .jssorb21 div { background-position: -5px -5px; }
+            .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+            .jssorb21 .av { background-position: -65px -5px; }
+            .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+        </style>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+            <!-- bullet navigator item prototype -->
+            <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
+        </div>
+        <!-- Bullet Navigator Skin End -->
+
+        <!-- Arrow Navigator Skin Begin -->
+        
+        <!-- Arrow Left -->
+     
+    </div>
+    <!-- Jssor Slider End -->
+</div><!--ulises-->
+
+<!--FIN DE SLIDER-->
+
+<br>
+
+  <nav id="barramenu">
+    <ul class="menu">
+      <li><a href="#" id="nav1"> INICIO</a></li>
+      <li><a href="#" id="nav2">HISTORIA</a></li>
+      <li><a href="#" id="nav3">VIDEOS</a></li>
+      <li><a href="#" id="nav4">ALBUM'S</a></li>
+      <li><a href="#" id="nav5">CARTA</a></li>
+      <li><a href="#" id="nav6">FINAL</a></li>
+
+    </ul>
+  </nav>
+
+  <section class="pa1">
+    Hechos historios: 25 de Septiembre<br>
+    
+    <article class="te1">
+      <h2 class="titulo1">
+        1493
+      </h2>
+      <figure class="img1">
+        <img src="imagenes/cristobal.PNG" alt="imagen 1">  
+      </figure>
+      <p class="pt1">
+      Cristóbal Colón emprende su segundo viaje al Nuevo mundo. El objetivo es explorar, colonizar y predicar la fe católica en los territorios descubiertos en el primer viaje. 
+      </p>
+    </article>
+
+  <article class="te1">
+      <h2 class="titulo1">
+        1945
+      </h2>
+      <figure class="img1">
+        <img src="imagenes/plutarco.PNG" alt="imagen 1">  
+      </figure>
+      <p class="pt1">
+       Nace Plutarco Elías Calles, Jefe Máximo de la Revolución, 
+ Pedagogo, militar y político mexicano que fue presidente de los Estados Unidos Mexicanos en el cuatrienio de 1924 a 1928;
+ figura clave en la historia de México.
+
+      </p>
+    </article>
+    
+     <article class="te1">
+      <h2 class="titulo1">
+        1956
+      </h2>
+      <figure class="img1">
+        <img src="imagenes/cable.PNG" alt="imagen 1">  
+      </figure>
+      <p class="pt1">
+  Entra en servicio el primer cable telefónico submarino transoceánico del mundo, que conecta a Terranova con Escocia, uniendo así Europa con América
+      </p>
+    </article>
 
 
-	 <a href="prueba.php" target="_blank">MI LINK<a/>
-		
-	
+     <article class="te1">
+      <h2 class="titulo1">
+        1995
+      </h2>
+      <figure class="img1">
+        <img src="imagenes/chavo.PNG" alt="imagen 1">  
+      </figure>
+      <p class="pt1">
+        Es transmitido en television abierta, el ultimo capitulo del afamado comediante "Chespirito"
+      </p>
+    </article>
 
+     <article class="te1">
+      <h2 class="titulo1">
+        2009
+      </h2>
+      <figure class="img1">
+        <img src="imagenes/ulises.JPG" alt="imagen 1"
+        style="height: 300px; width: 250px">  
+      </figure>
+      <p class="pt1">
+
+        Viernes 25 de septiembre, el joven  Ulises E. Cervantes Torres en aquel entonces estudiantes de la FIME, junto con su compañera de clases Angélica Toscano Ruiz, por voluntad propia y sin presión alguna, toman juntos una decisión  que cambiaría por siempre sus vidas:  Ser novios. Prometiéndose Amarse y respetarse, en la salud y en la enfermedad, en los tacos o comiendo sushi... 
+Juntos dieron a conocer esta gran noticia  al mundo entero por las redes sociales: Metroflog Y Facebook. Decisión que hasta hoy en día ha hecho muy feliz a esta pareja de personas que desde el primer día que se conocieron, supieron que fueron hechos el uno para el otro.
+
+      </p>
+    </article>
+
+
+  </section>
+
+<!--historia-->
+
+<section class="tabla">
+    <div class="wall">
+      <center><h2>Origenes!!</h2></center>
+        <article class="menu-historia">
+          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
+          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
+          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
+          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
+          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
+        </article>
+
+    
+    </div>
+  </section>
+
+
+
+
+
+
+ <footer>
+     <h3 class="powered">
+        
+       <span class="mejor">Ulises.Cervantes.2014</span>
+    </h3>
+    <div class="aulises">
+        <figure>
+            <a href="https://www.facebook.com/cervantestorres" target="_blank"><img src="imagenes/logo_fb.png"  title="FACEBOOK"></a>
+        </figure>
+        <figure>
+             <a href="https://github.com/ulisescerv91/" target="_blank"  title="GITHUB"><img src="imagenes/logo_github.png"></a>
+        </figure>
+        <figure>
+             <a href="https://twitter.com/k4ngr1" target="_blank" title="TWITTER" ><img src="imagenes/logo_t.png"></a>
+        </figure>
+        
+    </div>
+</footer>
 </body>
 </html>
-
-

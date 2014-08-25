@@ -1,0 +1,297 @@
+rosa=#cdb1d6
+azul=#26e1fd
+verde=#4fd66a
+rojo= #ed1b24
+/*para el blaco del img blanco*/
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+	0%  {background:verde; }
+    50%  {background:black;}
+    100%  {background:verde; }
+    
+}
+
+
+body
+	/*background-color #3f3f3f*/
+	background url("../imagenes/red_fondo.jpg")	
+	font-size: 16px
+header
+	background url("../imagenes/red_fondo.jpg")
+	/*background-color #3f3f3f*/
+	color white
+	overflow: hidden
+	padding: 1em
+	position: relative
+	z-index: 1//para que se vea el box shadow
+
+	.logo
+		float: left
+		padding: 0 0 0 1em 
+		margin: -1em 0 0 -2em
+		img
+			border-radius: 0 0 50% 0
+			background-color black
+			border-left 4px solid black
+			border-right 4px solid black
+			border-top 0
+			height:4em
+			width: 20%
+	.titulo
+		margin 0 0 0 20%
+		padding: 0
+		position: absolute
+		top 0
+		.titulotxt
+			height:7em
+			width: 80%
+			/*margin: 0
+			font-size: 3.5em
+			font-family: italiano
+			font-weight: bold
+			text-align: center
+			text-shadow: 2px 2px 0px red*/
+	.imgmenu
+		margin 0
+		padding: 0.2em
+		position: absolute
+		top 0.5em
+		right 3%
+		width: 20px
+		height: 20px
+				img
+					cursor:pointer
+					width: 20px
+					height: 20px
+		
+			
+
+		
+nav
+	/*background-color #e22d15 #3d3d3d*/
+	background-color #1b1b1b
+	border-left 15px solid #4fd66a
+	box-shadow: 2px 2px 10px rgba( white ,0.5)
+	position relative
+	padding: 0.5em
+	&:before
+		/* para ver como funciona activar el codigo dentro de este comentario
+		border-bottom 20px solid black
+		border-left 20px solid red
+		border-top 20px solid yellow
+		border-right 20px solid purple*/
+		border-bottom 50px solid transparent
+		border-left 20px solid #4fd66a
+		border-top 45px solid transparent
+		content: ""//este siempre se pone al hacer un after o before
+		position: absolute//para tomar de referencia inicial al 0,0 del nav
+		top 0
+		left 0
+	.menu
+		margin: 0 0 0 0//quitar espacion van y header
+		//esto es para cuando el pantalla es muy chica las opciones no las aviente
+		//hacia abajo si no hacia  aun lado
+		height: 80px// alto del que quiero mi nav
+		overflow-x auto 
+		line-height: 40px// que el alto de las lineas de texto es de 40px
+		white-space: nowrap//esto avienta las <a> hacia los lados y ya no hacia abajo
+
+		li
+			/*display: inline-block*/
+			background-color #ed1b24
+			border-radius: 1em
+			display: block
+			margin: 0 0 0.5em				
+			padding: 0 0.5em 0
+			a
+				color white
+				display: block
+				font-family: light
+				font-weight: bold
+				text-decoration: none
+				text-align: center
+				/*width: 100%*/
+//inicio
+.pa1
+	background-color #fa3a36
+	box-shadow: -0px -5px 10px rgba( white ,0.5)
+	font-size: 36px
+	font-family: oxygeno
+	color white
+	text-align: center
+	text-shadow: 2px 2px black;
+	padding: 0.5em
+	position: relative
+
+	.hechos
+		font-size: 32px
+	.te1
+		color black
+		border-radius: 0.5em
+		box-shadow: 5px 10px 10px rgba( black ,1)
+		background url("../imagenes/bg_slider.jpg")
+		margin-bottom 1em
+		overflow: hidden
+		padding: 0.5em
+		text-align: justify
+		text-shadow: 0px 0px black;
+		.titulo1
+			text-align: center
+			margin: 0
+		.img1
+
+			background-color verde
+			margin: 1em
+			float: left
+			img
+				/*border-radius: 1em*/
+				/*border 2px solid black*/
+				box-shadow: 2px 5px 10px rgba( black ,1)
+				height: 200px
+				margin: 0 4% 0 0
+				transform: rotate(-3deg)
+				width: 200px
+		.pt1
+			font-family: light
+			font-size: 18px
+			font-weight: bold
+			margin-top 2em
+
+//historia
+.tabla
+	background: url("../imagenes/wall.jpg")
+	position: relative
+	padding: 1em
+	.wall
+		background: url("../imagenes/corcho2.jpg")
+		padding: 1em
+		position: relative
+		overflow: hidden
+		.menu-historia
+			margin: 0
+			padding: 0
+			.stickys
+				background-color red
+				float: left
+				margin 0.5em 0.5em 0 0
+				width: 30%
+			.stickys:hover
+				border 2px solid white
+				background-color black
+				rotate
+				transform: rotate(30deg);
+				-webkit-transform: rotate(30deg);
+			
+			
+				
+footer
+	background-color naranja
+	color rgba(white,0.5)
+	text-align: center
+	padding: 1em 0
+	width: 100%
+	position: relative
+	h3
+		font-size: 14px
+		font-weight: normal
+		strong 
+			display: block
+		.mejor
+			&:before	
+			&:after
+				content " - "
+	.aulises
+		left 22%
+		margin: 0
+		position: absolute
+		figure
+			margin 0
+			margin-left 1em
+			padding: 0
+			float: left
+			img
+				width: 50px
+				height: 50px
+
+
+
+			
+@media screen and (min-width: 800px)
+//si la pantalla es de 768px
+		
+	header
+		.logo
+			img
+				/*para el blaco del img blanco*/
+				-webkit-animation: mymove 3s infinite;
+		.imgmenu
+			img
+				/*esto es para resapareces  la imagen*/
+				display: none
+	/*.pa1
+		.te1
+			width: 40%
+			vertical-align: top
+			display: inline-block
+			//background-color red
+			//esta funcion selecciona los elementos impares
+			//odd impar -even par
+			&:nth-child(odd)			
+				margin-right 2%*/
+	.pa1
+		.te1
+			width: 42%
+			display: inline-block
+			vertical-align: top
+			
+
+				
+	footer
+		.aulises
+			left: 42%;
+			img
+				border-radius: 50%
+			img:hover
+				background-color white
+				border 2px solid white
+				transition 0.4s
+	
+				
+	nav
+			
+		&:before
+			/* para ver como funciona activar el codigo dentro de este comentario
+			border-bottom 20px solid black
+			border-left 20px solid red
+			border-top 20px solid yellow
+			border-right 20px solid purple*/
+			border-bottom 28px solid transparent
+			border-left 12px solid verde
+			border-top 28px solid transparent
+			content: ""//este siempre se pone al hacer un after o before
+			position: absolute//para tomar de referencia inicial al 0,0 del nav
+			top 0
+			left 0
+		.menu
+			height: 40px
+				li
+					border-radius: 0em
+					display: inline-block
+					margin: 0 0.5% 0.5em	
+					/*width: 12%*/
+				li:hover
+					background-color verde
+					transition:0.4s;
+					text-decoration: underline
+					a 
+						color black
+						
+						
+
+
+	
+		
+		
+		
+			
+			
