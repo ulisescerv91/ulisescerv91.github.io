@@ -1,0 +1,137 @@
+@media screen and (min-width: 800px)
+	header
+		.logo
+			margin: 0 0 0 20%
+			width: 10%
+			height: 6.5em
+				
+		.titulotxt
+			height: 4em
+			margin 0.5em 0em  0 35%
+			width: 35%	
+		.menu-img
+			right: 10px
+
+				
+	nav	
+		padding-left 50%
+		&:before
+			/* para ver como funciona activar el codigo dentro de este comentario
+			border-bottom 20px solid black
+			border-left 20px solid red
+			border-top 20px solid yellow
+			border-right 20px solid purple*/
+			border-bottom 28px solid transparent
+			border- 12px solid verde
+			border-top 28px solid transparent
+			content: ""//este siempre se pone al hacer un after o before
+			position: absolute//para tomar de referencia inicial al 0,0 del nav
+			
+		.menu
+			height: 50px
+				li
+					border-radius: 0em
+					display: inline-block
+					margin: 0 0.5% 0 0
+					/*width: 12%*/
+					a
+						padding-top 0.5em
+				li:hover
+					background-color verde
+					transition:0.4s;
+					text-decoration: underline
+					a 
+						color black
+	
+	
+	#ulises
+		#carrucel	
+			background:url(../imagenes/arbol2.png) no-repeat // imagen central y para que no se repita en el div
+			background-size:100%// la imagen tenga el tamano del div
+			left:45%//posicion en la pantalla
+			top 1%
+			width:20em//tamano del div central
+			height:20em	
+			img 
+				border-radius: 5%
+				width: 15em
+				height: 8.5em
+				margin-top:250px
+				//el corazon aparesca sobre las demas imagenes
+			
+			#carucel1
+				transform: rotateY(0deg) translateZ(19em)
+			#carucel2
+				transform: rotateY(60deg) translateZ(19em)
+			#carucel3
+				transform: rotateY(120deg) translateZ(19em)
+			#carucel4
+				transform: rotateY(180deg) translateZ(19em)
+			#carucel5
+				transform: rotateY(240deg) translateZ(19em)
+			#carucel6
+				transform: rotateY(300deg) translateZ(19em)
+			
+	
+			
+
+
+	//historia 
+	.tabla
+		.arriba
+			border-radius: 50%
+			border 10px solid white
+			font-size: 5em
+			right: 5%
+
+		.wall
+			width: 70%
+			margin: 0 auto
+			margin-top 4em
+		.oneyear
+			width: 70%
+			margin: 0 auto
+			div
+				.oneyf1
+					width: 60%
+					margin: 0 auto 
+		.twoyear
+			width: 70%
+			margin: 0 auto
+			div
+				.oneyf1
+					width: 60%
+					margin: 0 auto 
+		.threeyear
+			width: 70%
+			margin: 0 auto
+			div
+				.oneyf1
+					width: 60%
+					margin: 0 auto 
+				.largas
+					width: 40%
+		.fouryear
+			width: 70%
+			margin: 0 auto
+			div
+				.oneyf1
+					width: 60%
+					margin: 0 auto 
+				.largas
+					width: 35%
+		.fiveyear
+			width: 70%
+			margin: 0 auto
+			div
+				.oneyf1
+					width: 60%
+					margin: 0 auto 
+				.largas
+						width: 35%
+	.pa1
+		.te1
+			//para hacer 2 columnas con las efemerides
+			width: 46%
+			vertical-align: top
+			display: inline-block

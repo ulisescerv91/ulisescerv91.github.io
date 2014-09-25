@@ -1,197 +1,758 @@
-rosa=#cdb1d6
 azul=#26e1fd
 verde=#4fd66a
 rojo= #ed1b24
+rosa=#ff6666
+morado=#cab0ff
+brisa=#46c9c5
+cafe=#d1a781
+negro=#1b1b1b
 /*para el blaco del img blanco*/
 /* Chrome, Safari, Opera */
+
 @-webkit-keyframes mymove {
 	0%  {background:verde; }
-    50%  {background:black;}
+    50%  {background:transparent; }
     100%  {background:verde; }
+    
+}
+@-webkit-keyframes mymove2 {
+	0%  {transform: scale(1.2)}
+    50%  {transform: scale(0.8) }
+    100%  {transform: scale(1.2) }
     
 }
 
 
+
+//iconos
+@font-face {
+	font-family: 'iconitos';
+	src:url('../fonts/fonts/icomoon.eot?9nzvx9');
+	src:url('../fonts/fonts/icomoon.eot?#iefix9nzvx9') format('embedded-opentype'),
+		url('../fonts/fonts/icomoon.woff?9nzvx9') format('woff'),
+		url('../fonts/fonts/icomoon.ttf?9nzvx9') format('truetype'),
+		url('../fonts/fonts/icomoon.svg?9nzvx9#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
 body
-	/*background-color #3f3f3f*/
-	background url("../imagenes/red_fondo.jpg")	
+	
+	background url("../imagenes/bgcafe.jpg")	
 	font-size: 16px
+	font-family: Ubuntu
+
+h2,h3,h4
+	//font
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.56),0px 0px 1px rgba(255, 255, 255, 0.32),0px 0px 5px rgba(255,255,255,0.25);
+	/*margin:14px -20px 6px -20px;*/
+	/*padding: 0px 20px 2px;*/
+	color: #222;
+	box-shadow: inset 0px 4px 0px -2px #fff, inset 0px -4px 0px -2px #fff;
+h2
+	
+	color #f0ddaa
+	font-size: 60px;
+	font-family: rex-light
+	background-color:rosa
+	border:2px solid rosa
+	text-shadow: 1px 1px black;
+	text-align: center
+	//para q el h2 q esta en el cont pa1, tenga espacio de ladoa  lado del body
+	margin 0.6em -0.6em 0.5em -0.6em
+	padding-top 0.2em
+
+
+
+h3
+	border:2px solid azul
+	font-size: 33px;
+	padding 0.2em 0 0 0
+	background-color:azul
+	
+	font-family: Orbitron
+
+h4
+	font-size: 30px;
+	background-color:verde
+	border:2px solid verde
+	text-align: center
 header
-	background url("../imagenes/red_fondo.jpg")
-	/*background-color #3f3f3f*/
-	color white
-	overflow: hidden
-	padding: 1em
-	position: relative
-	z-index: 1//para que se vea el box shadow
+	background url("../imagenes/bg-footer.jpg")
+	//borde transparente
+	border-bottom: 10px solid rgba(0, 0, 0, 0.1); /* rgba for transparency */
+	-webkit-background-clip: padding;   /* Webkit */
+	background-clip: padding-box; /* for browsers that fully support background clip */
+	box-shadow:0px 0px 20px #000;
+
+
+		
+	padding: 0
+	position: fixed
+	width: 100%
+	z-index: 2//para que se vea el box shadow
+	
+
 
 	.logo
-		float: left
-		padding: 0 0 0 1em 
-		margin: -1em 0 0 -2em
-		img
-			border-radius: 0 0 50% 0
-			background-color black
-			border-left 4px solid black
-			border-right 4px solid black
-			border-top 0
-			height:4em
-			width: 20%
-	.titulo
-		margin 0 0 0 20%
-		padding: 0
-		position: absolute
-		top 0
-		.titulotxt
-			height:7em
-			width: 80%
-			/*margin: 0
-			font-size: 3.5em
-			font-family: italiano
-			font-weight: bold
-			text-align: center
-			text-shadow: 2px 2px 0px red*/
-	.imgmenu
-		margin 0
-		padding: 0.2em
-		position: absolute
-		top 0.5em
-		right 3%
-		width: 20px
-		height: 20px
-				img
-					cursor:pointer
-					width: 20px
-					height: 20px
 		
+		float: left
+		position: absolute
+		top -4px
+		margin: 0 0 0 1em
+		width: 27%
+		height: 6em
 			
+	.titulotxt
+		float: left
+		height: 4em
+		margin 0.5em 0em  0 30%
+		width: 50%	
+	.menu-img
+		cursor pointer
+		float: left
+		width: 7%
+		height: 2em
+		margin 0.5em 0 0 1em
+		
 
 		
 nav
 	/*background-color #e22d15 #3d3d3d*/
 	background-color #1b1b1b
-	border-left 15px solid #4fd66a
+	border-right 15px solid verde
 	box-shadow: 2px 2px 10px rgba( white ,0.5)
-	position relative
-	padding: 0.5em
-	&:before
+	position fixed
+	top 5em
+	width: 100%
+	z-index: 1
+	
+	//este es para hacer un tringulo al lado derecho del nav
+	//&:before
 		/* para ver como funciona activar el codigo dentro de este comentario
 		border-bottom 20px solid black
 		border-left 20px solid red
 		border-top 20px solid yellow
 		border-right 20px solid purple*/
-		border-bottom 50px solid transparent
-		border-left 20px solid #4fd66a
-		border-top 45px solid transparent
-		content: ""//este siempre se pone al hacer un after o before
-		position: absolute//para tomar de referencia inicial al 0,0 del nav
-		top 0
-		left 0
+		// border-bottom 170px solid transparent
+		// border-right 20px solid verde
+		// border-top 140px solid transparent
+		// content: ""//este siempre se pone al hacer un after o before
+		// position: absolute//para tomar de referencia inicial al 0,0 del nav
+		// top 0
+		// 	right 0
 	.menu
 		margin: 0 0 0 0//quitar espacion van y header
 		//esto es para cuando el pantalla es muy chica las opciones no las aviente
 		//hacia abajo si no hacia  aun lado
-		height: 80px// alto del que quiero mi nav
+		/*height: 80px*/// alto del que quiero mi nav
 		overflow-x auto 
 		line-height: 40px// que el alto de las lineas de texto es de 40px
 		white-space: nowrap//esto avienta las <a> hacia los lados y ya no hacia abajo
 
 		li
 			/*display: inline-block*/
-			background-color #ed1b24
-			border-radius: 1em
+			/*background-color #ed1b24*/
+			border-radius: 1em 0 0 1em
 			display: block
 			margin: 0 0 0.5em				
 			padding: 0 0.5em 0
 			a
-				color white
+				color cafe
 				display: block
 				font-family: light
 				font-weight: bold
 				text-decoration: none
 				text-align: center
 				/*width: 100%*/
+			//poner icono en cada opc
+			#nav1
+				&:before
+					font-family: iconitos
+					content: "\e600"
+					font-size: 1.5em
+					font-weight: normal
+			#nav2
+				&:before
+					font-family: iconitos
+					content: "\e606"
+					font-size: 1.5em
+					font-weight: normal
+			#nav3
+				&:before
+					font-family: iconitos
+					content: "\e602"
+					font-size: 1.5em
+					font-weight: normal
+			#nav4
+				&:before
+					font-family: iconitos
+					content: "\e603"
+					font-size: 1.5em
+					font-weight: normal
+
+						
+
+
+
+
+
+//imagenes rotantes
+@-webkit-keyframes girando 
+	from,20% 	{ transform: rotateY(0deg)  }
+	30%,40%  	{ transform: rotateY(90deg)  }
+	50%,60%  	{ transform: rotateY(180deg) }
+	70%,80% 	{ transform: rotateY(270deg) }
+	90%,to		{ transform: rotateY(360deg) }	
+		
+@-webkit-keyframes girando 
+	100%{transform:rotateY(360deg)} 
+	//este es para que no se detenga (q siempre este en movimiento)
+
+.ulises//imagened rotantes
+	
+	position: relative
+	height: 23em
+	.carrucel
+		-webkit-animation:24s girando infinite linear //mada a la funcion giro
+		background:url(../imagenes/cora.png) no-repeat // imagen central y para que no se repita en el div
+		background-size:100%// la imagen tenga el tamano del div
+		position:absolute
+		left:30%//posicion en la pantalla
+		top:10%//posicion en la pantalla
+		width:11em//tamano del div central
+		height:11em	
+		margin-top 6em
+		transform-style: preserve-3d;
+		img
+			border-radius: 1em//opciional
+			box-shadow: -1px 6px 13px 0px rgba(50, 50, 50, 1)
+			position:absolute //para que giren sobre la misma posicion 
+			margin-top:135px;//la imagen den vueltas un poco mas abajo qie la img central
+			width: 70%//tamano de las img
+			height: 70%//tamano de las img
+			opacity: 0.9
+
+
+		/*#cristalab //miras porq abajo
+			transform: rotateY(0deg) translateZ(10em)*/
+			//rotateY grados q esta con respecto del centro (img centraleta en 0)
+			//translateX son lo q la img girara de retirado con respecto del centro(img central)
+		#carucel1
+			transform: rotateY(45deg) translateZ(10em)
+		#carucel2
+			transform: rotateY(90deg) translateZ(10em)
+		#carucel3
+			transform: rotateY(135deg) translateZ(10em)
+		
+
+		/*#cristalab1//miras porq abajo
+			transform: rotateY(180deg) translateZ(10em)*/
+			//rotateY grados q esta con respecto del centro (img centraleta en 0)
+			//translateX son lo q la img girara de retirado con respecto del centro(img central)
+		#carucel4
+			transform: rotateY(225deg) translateZ(10em)
+		#carucel5
+			transform: rotateY(270deg) translateZ(10em)
+		#carucel6
+			transform: rotateY(315deg) translateZ(10em)
+
+
+		/*tanto el angulo 0 y el 180* no se ponene para que cuando
+		la imagen central quede compeltamente de frente y dando la espalda
+		esta se vea sin que ninguna imagen le estorbe */
+
+
+
 //inicio
+
 .pa1
-	background-color #fa3a36
-	box-shadow: -0px -5px 10px rgba( white ,0.5)
 	font-size: 36px
-	font-family: oxygeno
 	color white
 	text-align: center
-	text-shadow: 2px 2px black;
-	padding: 0.5em
+	text-shadow: 2px 2px black
+	margin-top 2.5em
+	padding: 1em
 	position: relative
 
 	.hechos
 		font-size: 32px
 	.te1
 		color black
-		border-radius: 0.5em
+		border-radius: 1em
 		box-shadow: 5px 10px 10px rgba( black ,1)
 		background url("../imagenes/bg_slider.jpg")
 		margin-bottom 1em
+		//Para poder mostrar la etiquera sobresaliente
 		overflow: hidden
 		padding: 0.5em
 		text-align: justify
 		text-shadow: 0px 0px black;
 		.titulo1
 			text-align: center
-			margin: 0
+			margin: 0 -1em 0 -1em
+
+		// .con-titu
+		// 	//sombra en titulo
+		// 	box-shadow: 2px 2px 3px #292929;
+		// 	//para que el titulo se salga del contenedor
+		// 	width: 95%
+		// 	border-radius 0 2em 2em 0
+		// 	margin-left: -40px;
+		// 	.cabecera
+		// 		position: relative;
+		// 		//color te letrero
+		// 		background: azul
+		// 		border-radius 0 2em 2em 0
+		// 		font-size: 33px;
+		// 		padding 0.2em 1em 0 0
+		// 		border:2px solid azul
+		// 		font-family: Orbitron
+
+		// 		//lineas blancas de titulo
+		// 		text-shadow: 1px 1px 0px rgba(white 0.56),0px 0px 1px rgba(white 0.32),0px 0px 5px rgba(white 0.25);
+		// 		text-align: right
+		// 		box-shadow: inset 0px 4px 0px -2px #fff, inset 0px -4px 0px -2px #fff;
+		// 		.triangulo
+		// 			height: 0px
+		// 			width: 0px
+		// 			border-style solid
+		// 			//se le da un borde para que aparesca el span
+		// 			//aqui se maneja el tamano del triangulo
+		// 			border-width 0 20px 12px 0 
+		// 			//color del triangulo
+		// 			border-color transparent #02c1dd transparent transparent
+		// 			position: absolute
+		// 			//para que este pro debajo del titulo que queremos que aparesca
+		// 			//resltado
+		// 			top 106%
+		// 			left: 0px
+					
+				
+
+			 	
+			
 		.img1
 
-			background-color verde
-			margin: 1em
+			background-color azul
+			margin: 0.5em 
 			float: left
 			img
 				/*border-radius: 1em*/
 				/*border 2px solid black*/
 				box-shadow: 2px 5px 10px rgba( black ,1)
-				height: 200px
+				border 5px solid #2a2a2a
+				border-radius: 1em
+				//height: 200px
 				margin: 0 4% 0 0
 				transform: rotate(-3deg)
-				width: 200px
+				//width: 200px
 		.pt1
-			font-family: light
+			font-family: Ubuntu
 			font-size: 18px
-			font-weight: bold
 			margin-top 2em
 
 //historia
-.tabla
-	background: url("../imagenes/wall.jpg")
-	position: relative
-	padding: 1em
+.tabla	
+	padding: 0.5em 
+	//boton para ir a  el inicio
+	.arriba
+		background-color #651850
+		border-radius: 0.3em 0 0 0.3em
+		border-right 0.1em solid white
+		color white
+		height: 1em
+		font-size: 3em
+		opacity: 0.8
+		position: fixed
+		right: 0
+		text-decoration: none
+		top 4em
+		z-index: 3
+
 	.wall
 		background: url("../imagenes/corcho2.jpg")
-		padding: 1em
+		
+		border: 10px solid rgba(0, 0, 0, 0.1); /* rgba for transparency */
+		-webkit-background-clip: padding;   /* Webkit */
+		background-clip: padding-box; /* for browsers that fully support background clip */
+		box-shadow: 0px 0px 10px  rgba( black )
+		border-radius: 0.5em
+		margin-top 6em
+		padding 2em 0em 2em 0em
 		position: relative
 		overflow: hidden
+		.papeltitu
+			display: block
+			margin 0em auto
+			width: 40%
+
 		.menu-historia
 			margin: 0
-			padding: 0
+			padding 1em 0em 0em 0em
 			.stickys
-				background-color red
+				cursor:pointer
 				float: left
-				margin 0.5em 0.5em 0 0
-				width: 30%
-			.stickys:hover
-				border 2px solid white
-				background-color black
-				rotate
-				transform: rotate(30deg);
-				-webkit-transform: rotate(30deg);
-			
+				margin 1% 0 0 2%
+				width: 18%
 			
 				
-footer
-	background-color naranja
-	color rgba(white,0.5)
-	text-align: center
-	padding: 1em 0
-	width: 100%
+	article //este es para los videos q estan en  por cada ano sean responsive
+		div
+			.contenedor
+				//con lo del contenedor y el iframe se hace responsive
+				height: 0
+				overflow: hidden
+				padding-bottom 56.25%//proporcion 16:9
+				padding-top 30px
+				position: relative
+				iframe
+					height: 100%
+					left: 0
+					position: absolute
+					top 0
+					width: 100%		
+
+	article
+		p
+			//generales de parrafos
+			margin-bottom 5em
+			text-align: center
+			font-size: 2em
+			font-family: Open Sans
+			padding-bottom 0.2em
+
+	.oneyear
+		background url("../imagenes/1316.png")
+		padding-top 1em
+		.oneyf1
+			border-radius: 0.3em
+			box-shadow 0px 5px 5px black
+			display: block
+			margin 0 auto
+			width: 90%
+
+		
+		p 	
+			//background-color rgba(255, 179, 128,0.3)
+			color #6a0061
+			font-weight: bold
+			//text-shadow: 1px 2px 2px black
+			
+	.twoyear
+		background url("../imagenes/yellow.png")
+		padding-top 1em
+		.oneyf1
+			border-radius: 10%
+			border-top 2px solid black
+			box-shadow: 3px 3px 5px black
+			display: block
+			margin 0 auto
+			width: 90%
+		p 
+			background-color rgba(255,232,186,0.85)
+			color #fe4448
+			font-weight: bold
+			//text-shadow: 1px 1px 1px #5d5249
+		
+	.threeyear
+		background url("../imagenes/pink.png")
+		padding-top 1em
+		.oneyf1
+			box-shadow: -2px -5px 5px black
+			border-radius: 10%
+			display: block
+			margin 0 auto				
+			width: 90%
+		p 
+			background-color rgba(0,0,0,0.7)
+			color #ffffff
+			
+			
+	.fouryear
+		background url("../imagenes/1261.png")
+		padding-top 1em
+		.oneyf1			
+			box-shadow: 2px 4px 2px 2px rgba(0,0,0,0.75);
+			border-radius: 5%
+			display: block
+			margin 0 auto				
+			width: 90%
+		p 
+			background-color rgba(208, 244, 134,0.8)
+			color #fe0000
+			
+			
+	.fiveyear
+		background url("../imagenes/1318.png")
+		padding-top 1em
+		.oneyf1
+			box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.75);
+			border-radius: 5%
+			display: block
+			margin 0 auto				
+			width: 90%
+		p 
+			background-color rgba(176, 159, 254,0.9)
+			color black
+			
+
+			
+		
+	article
+		.tituloyear
+			color white
+			font-size: 25px
+			font-weight: bold
+			margin: 0
+			padding: 0 
+			text-align: center
+/*.min,.max
+	border 0*/
+.galeria
+	/*background-color #e22d15 #3d3d3d*/
+	background-color #1b1b1b
+	// padding 7em 0 0 0
+	padding 0 0 0 0
+	margin: 0
+
+	
+	.grande
+		/*border 2px solid white*/
+		//box-shadow: 0px 0px 3px	2px  rgba(147,185,182,0.75);
+		margin: 0em auto
+		padding: 0em 0 0 0
+		background: #1b1b1b
+		//para que los bloques se agana la derecha con  al barra
+		overflow-x hidden
+		overflow-y hidden
+		/*height: 300px*/
+		white-space: nowrap
+		width: 350px
+
+		li			
+			display:  inline-block//hacer a la izq los li yquita la bineta
+			position: relative
+			margin: 0
+			padding: 0
+			img
+				transition: width 10s ease;
+				-webkit-transition: width 10s ease;
+				margin: 0
+				padding: 0
+			.espacio
+				height:4.5em
+
+			//donde estan las frase de cada imagen	
+			span
+				background-color rgba(255,255,255,0.8)
+				bottom: 10px
+				left: 0
+				display: block
+				font-family: Open Sans
+				font-weight: bold
+				position: absolute
+				margin 0
+				padding: 0.3em 0 0.23em 0
+				text-align: center
+				width: 100%
+			.frase1
+				background-color rgba(255,255,255,0.9)
+			.frase4,.frase8
+				bottom: 250px
+			.frase6,.frase8
+				background-color rgba(255,255,255,0.9)
+			
+				
+		
+
+	
+	.chico
+		background-color #1b1b1b
+		/*height: 120px*/
+		overflow-x auto
+		white-space:  nowrap//los avienta a la derecha
+		overflow-y hidden
+
+		li 	
+			border 2px solid black
+			margin-right 3em
+			display: inline-block
+			position: relative
+			opacity: 0.3
+			img 
+				height: 80px
+			&:after
+				color white
+				content: "\e60b"
+				font-size: 2.5em
+				font-family: iconitos
+				opacity: 0.7
+				position: absolute
+				top 30%
+				right: -45%
+		.last-img-ch
+			&:after
+				content: ""
+		li:hover
+			opacity: 1
+			
+					
+//videos	
+.carta
 	position: relative
-	h3
+	overflow: hidden
+	.espacio
+		height: 4em
+	.separador
+		background: white
+		padding: 0
+		
+
+		img
+			height: 28.2em
+			width: 100%
+		.txtcarta
+			color: red
+			font-size: 16px
+			height: 100%
+			overflow: scroll
+			padding-left 30%
+			padding-right 5%
+			position: absolute
+			top 2.7em			
+			p 
+				color #333333
+				font-size: 1.8em
+				text-shadow: 2px 2px 5px #999999;
+				text-align: center
+				width: 92%
+
+			.parrafo-0
+				color: #222222
+				font-family: Crafty Girls
+				font-size: 2em
+				font-weight: bold
+				margin 5em 0 0 
+				padding-bottom 3em
+				text-align: center
+				text-shadow: 4px 4px 4px #999999
+			.parrafo-1
+				&:before
+					font-family: iconitos
+					font-size: 2em
+					//corazon
+					content: "\e607"
+					color rosa
+			.corazones	
+				float: left
+				height: 50px
+				width: 50px
+			.parrafo-1a
+				margin 3em 0 2em 0
+
+
+
+			.parrafo-2
+				margin 3em 0 0 1em
+				font-family: light
+				font-size: 1.3em
+			.negritas
+				font-weight: bold
+				font-size: 1.5em
+
+
+
+			.parrafo-3
+				padding 3em 0 0 0
+				
+			.negritas2
+				color #ff0000
+				font-family: light
+				font-size: 1.6em
+				text-align: center
+				&:after
+					//sonrisa
+					font-family: iconitos
+					font-size: 2em
+					content: "\e60a"
+					color rojo
+					text-shadow: 0px 0px 0px #999999
+			.subra
+				text-decoration: underline
+				font-size: 1.8em
+
+			.mundo
+				&:after
+					//sonrisa
+					font-family: iconitos
+					font-size: 2em
+					content: "\e606"
+					color rojo
+			.rojos
+				color rojo
+				font-family: Boogaloo
+				font-size: 2em
+
+			.amo1
+				color: #f14a51
+				font-size: 1em
+				font-family: Boogaloo
+			.amo2
+				color: #d51119
+				font-size: 1.4em
+				font-family: Boogaloo
+			.amo3
+				color: #a60d14
+				font-size: 1.5em
+				font-family: Boogaloo
+
+
+
+			.amo4
+				color: #222222
+				font-family: Crafty Girls
+				font-size: 3em
+				font-weight: bold
+				text-align: center
+				text-shadow: 4px 4px 4px #999999
+			
+			.parrafo-4
+				margin 3em 0 0 2em
+
+			.parrafo-5
+				font-family: light
+				font-size: 1.6em
+				text-align: center
+			.parrafo-6
+				font-size: 1.1em
+				margin 3em 0 4em 1em
+			.rojos2
+				color #ff0000
+				font-size: 1.3em
+			.parrafo-7
+				font-family: italiano
+				font-size: 2.3em
+				text-align: center
+				padding-bottom 4em
+
+	
+		
+
+
+
+footer
+	background url("../imagenes/bg-footer.jpg")	
+	bottom 0
+	//height: 1.5em
+	//overflow: hidden
+	position: fixed
+	padding 0.8em
+	width: 100%
+	/*h3
 		font-size: 14px
 		font-weight: normal
 		strong 
@@ -199,99 +760,207 @@ footer
 		.mejor
 			&:before	
 			&:after
-				content " - "
+					content " - "*/
 	.aulises
+		bottom: 0
+		color #d1a781
 		left 22%
-		margin: 0
 		position: absolute
-		figure
-			margin 0
-			margin-left 1em
+		text-align: center
+	/*	&:before
+			font-family: iconitos
+			content: "\e60d"
+			color white
+		&:after
+			font-family: iconitos
+			content: "\e60f"
+			color white*/
+		img
+			margin 0 0.3em 0 0.3em
 			padding: 0
-			float: left
-			img
-				width: 50px
-				height: 50px
-
-
-
-			
+		//esto es para los poner como caracter los simbolos de 
+		//fb y gh
+		.fot1
+			text-decoration: none
+			&:before
+				font-family: iconitos
+				// font-size: 2em
+				margin-bottom 0.5em
+				content: "\e60d"
+				color white
+		.fot2
+			text-decoration: none
+			&:before
+				font-family: iconitos
+				// font-size: 2em
+				margin-bottom 0.5em
+				content: "\e60f"
+				color white
 @media screen and (min-width: 800px)
-//si la pantalla es de 768px
-		
 	header
 		.logo
-			img
-				/*para el blaco del img blanco*/
-				-webkit-animation: mymove 3s infinite;
-		.imgmenu
-			img
-				/*esto es para resapareces  la imagen*/
-				display: none
-	/*.pa1
-		.te1
-			width: 40%
-			vertical-align: top
-			display: inline-block
-			//background-color red
-			//esta funcion selecciona los elementos impares
-			//odd impar -even par
-			&:nth-child(odd)			
-				margin-right 2%*/
-	.pa1
-		.te1
-			width: 42%
-			display: inline-block
-			vertical-align: top
+			margin: 0 0 0 15%
+			width: 10%
+			height: 6.5em
+		.titulotxt
+			height: 4em
+			margin: 0.5em 0 0 33%
+			width: 35%
+		.menu-img
+			position: absolute
+			right: 20%
+			top: 10px;
+			width: 3em
+			/*para el blaco del img blanco*/
+			-webkit-animation: mymove 3s infinite;
+			padding 0.3em
+			border-radius: 0.3em
+	
+	.ulises
+		padding-bottom 2em
+		.carrucel
+			background:url(../imagenes/arbol2.png) no-repeat // imagen central y para que no se repita en el div
+			background-size:100%// la imagen tenga el tamano del div
+			left:38%//posicion en la pantalla
+			top 5%
+			width:20em//tamano del div central
+			height:18em	
+			img 
+				border-radius: 5%
+				width: 15em
+				height: 8.5em
+				margin-top:270px
+			#carucel1
+				transform: rotateY(0deg) translateZ(19em)
+			#carucel2
+				transform: rotateY(60deg) translateZ(19em)
+			#carucel3
+				transform: rotateY(120deg) translateZ(19em)
+			#carucel4
+				transform: rotateY(180deg) translateZ(19em)
+			#carucel5
+				transform: rotateY(240deg) translateZ(19em)
+			#carucel6
+				transform: rotateY(300deg) translateZ(19em)
+	
+
+	.tabla
+		.arriba
+			border-radius: 50%
+			border 10px solid white
+			font-size: 5em
+			right: 5%
+			-webkit-animation: mymove2 3s infinite;
+		.arriba:hover
+			background-color #ffffff
+			color #651850
+			border 10px solid #651850
+			opacity: 1
+			transition:0.3s;
+
 			
 
+		.wall
+			width: 70%
+			margin: 0 auto
+			margin-top 4em
+			.menu-historia
+				img:hover
+					transform: scale(1.5)
+		.oneyear,.twoyear,.threeyear,.fouryear,.fiveyear
+			width: 70%
+			margin: 0 auto
+			div
+				.oneyf1
+					width: 60%
+					margin: 0 auto
 				
+		 
+		.threeyear
+			div		
+				.largas
+					width: 40%
+		.fouryear,.fiveyear
+			div					
+				.largas
+					width: 35%
+	.pa1
+		//efemerides
+		.te1
+			//para hacer 2 columnas con las efemerides
+			width: 40%
+			vertical-align: top
+			display: inline-block	
+	//galeria
+	.galeria
+		background:url(../imagenes/1333.png) no-repeat // imagen central y para que no se repita en el div
+		background-size:100%//			
+		height: 40em
+		//filter blur(2px)
+		.grande
+			background-color transparent
+			margin: 0em auto
+			li 
+			
+				.espacio
+					height: 8em
+			
+		.chico
+			background-color transparent
+			margin-top 4em
+			li 
+				opacity: 0.5
+				&:hover
+					opacity: 1
+						
+
+				img
+				&:after
+					right: -30%
+				a
+					img
+						width: 100%
+						height: 180%
+			
+	.carta
+		.separador
+			img 
+				height: 35.8em
+			.txtcarta
+				.parrafo-0,.parrafo-1,.parrafo-1a,.parrafo-3,.parrafo-5
+					font-size: 3em
+				.parrafo-2,.parrafo-6,.negritas2
+					font-size: 2.5em
+				.amo4
+					display: block
+					font-size: 8em
+					margin: 0 auto
+				.parrafo-7
+					display: block
+					font-size: 3.5em
+					margin: 0 auto
+				.pultimo
+					margin: 0 auto
 	footer
 		.aulises
-			left: 42%;
-			img
-				border-radius: 50%
-			img:hover
-				background-color white
-				border 2px solid white
-				transition 0.4s
-	
-				
+			text-align: center
+			left: 42%
+		
+
 	nav
-			
-		&:before
-			/* para ver como funciona activar el codigo dentro de este comentario
-			border-bottom 20px solid black
-			border-left 20px solid red
-			border-top 20px solid yellow
-			border-right 20px solid purple*/
-			border-bottom 28px solid transparent
-			border-left 12px solid verde
-			border-top 28px solid transparent
-			content: ""//este siempre se pone al hacer un after o before
-			position: absolute//para tomar de referencia inicial al 0,0 del nav
-			top 0
-			left 0
 		.menu
-			height: 40px
+			overflow: hidden
+			text-align: center
 				li
 					border-radius: 0em
 					display: inline-block
-					margin: 0 0.5% 0.5em	
-					/*width: 12%*/
+					margin: 0 4% 0 0
+					a
+						padding 0.7em
 				li:hover
 					background-color verde
-					transition:0.4s;
 					text-decoration: underline
+					-webkit-transform: scale(1.5);
+					transform: scale(1.5)
 					a 
-						color black
-						
-						
-
-
-	
-		
-		
-		
-			
-			
+						color #222222

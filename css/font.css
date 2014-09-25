@@ -1,16 +1,18 @@
 @font-face { 
 	font-family: italiano;
 	 src: url(../fonts/Italianno/Italianno-Regular.ttf) ;
-	 
-	}
-@font-face { 
-	font-family: oxygeno;
-	 src: url(../fonts/Oxygen/Oxygen-Regular.ttf) ;
-	 
 	}
 
 @font-face { 
 	font-family: light;
-	 src: url(../fonts/Lato/Lato-light.ttf) ;
+	 src: url(../fonts/Lato/Lato-light.ttf) ;	 
+	}
+@font-face { 
+	font-family: Boogaloo;
+	 src: url(../fonts/Boogaloo/Boogaloo-Regular.ttf) ;	 
+	}
+@font-face { 
+	font-family: rex-light;
+	 src: url(../fonts/rex/rex-light.ttf) ;
 	 
 	}

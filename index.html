@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
  <!--  <meta name="viewport"content"width=device-width initial-
 scale=1 maximum-scale=1" > ESTA ES LA OPCION DE MEJORANDO-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> <!--http://www.genbetadev.com/desarrollo-web/responsive-design-estructura-adaptable INFO AQUI-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!--http://www.genbetadev.com/desarrollo-web/responsive-design-estructura-adaptable INFO AQUI-->
   <title>5to aniversario</title>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/pagina_js.js"></script>
@@ -12,260 +12,71 @@ scale=1 maximum-scale=1" > ESTA ES LA OPCION DE MEJORANDO-->
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
   <link rel="stylesheet" type="text/css" href="css/font.css">
 
-  <!--CODIGOS PARA SLIDER>-->
-    
-    <!-- Jssor Slider End -->
-    <!--CODIGOS PARA SLIDER>-->
-     <!-- it works the same with all jquery version from 1.x to 2.x -->
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
-    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
-    <script type="text/javascript" src="js/jssor.core.js"></script>
-    <script type="text/javascript" src="js/jssor.utils.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
+<!-- tipografias de google -->
+<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'> <!-- h3 -->
+
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'> <!-- texto efemerides -->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><!-- parrafos  historia -->
+<link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'><!-- carte -->
+
 
 </head>
 <body>
   <header>
-
-    <figure class="logo">
-      <img src="imagenes/5to.png" alt="5to">
-    </figure>
-    <div class="titulo">
+      <img src="imagenes/logo3a.png" alt="5to" class="logo">
       <img src="imagenes/amor.png" alt="logo" class="titulotxt">
-    </div>  
-    <figure class="imgmenu" id="imgmenu"alt="VER MENU" tittle="menu">
-        <img src="imagenes/menus.png">
-    </figure>
-
+      <img src="imagenes/menus.png" class="menu-img">
   </header>
 
-<!--INICIO SLIDER-->
-
- <script>
-        jQuery(document).ready(function ($) {
-
-           
-            var _CaptionTransitions = [];
-            _CaptionTransitions["L"] = { $Duration: 900, $FlyDirection: 1, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $ScaleHorizontal: 0.6, $Opacity: 2 };
-            _CaptionTransitions["R"] = { $Duration: 900, $FlyDirection: 2, $Easing: { $Left: $JssorEasing$.$EaseInOutSine }, $ScaleHorizontal: 0.6, $Opacity: 2 };
-            _CaptionTransitions["T"] = { $Duration: 900, $FlyDirection: 4, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $ScaleVertical: 0.6, $Opacity: 2 };
-            _CaptionTransitions["B"] = { $Duration: 900, $FlyDirection: 8, $Easing: { $Top: $JssorEasing$.$EaseInOutSine }, $ScaleVertical: 0.6, $Opacity: 2 };
-            _CaptionTransitions["RTTL|BR"] = { $Duration: 900, $Zoom: 11, $Rotate: 1, $FlyDirection: 10, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Top: $JssorEasing$.$EaseInCubic, $Zoom: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInCubic }, $ScaleHorizontal: 0.6, $ScaleVertical: 0.6, $Opacity: 2, $Round: { $Rotate: 0.8} };
-            _CaptionTransitions["MCLIP|R"] = { $Duration: 900, $Clip: 2, $Move: true, $Easing: { $Clip: $JssorEasing$.$EaseInOutCubic} };
-         
-
-            var options = {
-                $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                $AutoPlayInterval: 2000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
-
-                $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-                //$SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-                $SlideDuration: 800,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-                $SlideSpacing: 0,                                   //[Optional] Space between each slide in pixels, default value is 0
-                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
-                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
-                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
-                $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-
-                $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
-                    $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
-                    $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
-                    $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
-                    $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
-                },
-
-                $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
-                    $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
-                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-                    $SpacingX: 8,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
-                    $SpacingY: 8,                                   //[Optional] Vertical space between each item in pixel, default value is 0
-                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-                },
-
-                $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
-                    $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
-                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-                }
-            };
-
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider() {
-                var bodyWidth = document.body.clientWidth;
-                if (bodyWidth)
-                    jssor_slider1.$SetScaleWidth(Math.min(bodyWidth, 1920));
-                else
-                    window.setTimeout(ScaleSlider, 30);
-            }
-
-            ScaleSlider();
-
-            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-                $(window).bind('resize', ScaleSlider);
-            }
 
 
-            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
-            //    $(window).bind("orientationchange", ScaleSlider);
-            //}
-            //responsive code end
-        });
-    </script>
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles to css file or css block. -->
-    <div id="ulises">
-    <div id="slider1_container" style="position: relative; margin: 0 auto;
-        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; background url('../imagenes/red_fondo.jpg'; box-shadow: 5px 5px 10px rgba( white ,1); z-index: 1;) ">
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
-        </div>
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: pointer; position: absolute; left: 12%; top: 0px; width: 1000px;
-            height: 500px; overflow: hidden; border-radius: 15%; border: 2px groove black;" >
-
-            <div>
-                <img u="image" src="img/1920/a1.jpg"/>
-                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
-                
-                </div>
-                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                    
-                </div>
-                
-            </div>
-            <div>
-                <img u="image" src="img/1920/a2.jpg" />
-                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
-                
-                </div>
-                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                    
-                </div>
-            
-            </div>
-            <div>
-                <img u="image" src="img/1920/a3.jpg" />
-                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
-                
-                </div>
-                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                    
-                </div>
-                
-            </div>
-            <div>
-                <img u="image" src="img/1920/a4.jpg" />
-                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
-                
-                </div>
-                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                    
-                </div>
-                
-            </div>
-             <div>
-                <img u="image" src="img/1920/a5.jpg" />
-                <div u="caption" t="NO" t3="RTT|2" r3="137.5%" du3="3000" d3="500" style="position: absolute; width: 445px; height: 300px; top: 100px; left: 600px;">
-                
-                </div>
-                <div u="caption" t="RTT|2" r="-75%" du="1600" d="2500" t2="NO" style="position: absolute; width: 470px; height: 220px; top: 120px; left: 650px;">
-                    
-                </div>
-                
-            </div>
-  
-            <!-- Example to add fixed static share buttons in slider BEGIN -->
-            <!-- Remove it if no need -->
-            <!-- Share Button Styles -->
-            
-
-            <!-- Example to add fixed static share buttons in slider BEGIN -->
-            <!-- Remove it if no need -->
-       
-            <!-- Example to add fixed static share buttons in slider END -->
-        </div>
-                
-        <!-- Bullet Navigator Skin Begin -->
-        <style>
-            /* jssor slider bullet navigator skin 21 css */
-            /*
-            .jssorb21 div           (normal)
-            .jssorb21 div:hover     (normal mouseover)
-            .jssorb21 .av           (active)
-            .jssorb21 .av:hover     (active mouseover)
-            .jssorb21 .dn           (mousedown)
-            */
-            .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av
-            {
-                background: url(img/b21.png) no-repeat;
-                overflow:hidden;
-                cursor: pointer;
-            }
-            .jssorb21 div { background-position: -5px -5px; }
-            .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-            .jssorb21 .av { background-position: -65px -5px; }
-            .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
-        </style>
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
-        </div>
-        <!-- Bullet Navigator Skin End -->
-
-        <!-- Arrow Navigator Skin Begin -->
-        
-        <!-- Arrow Left -->
-     
-    </div>
-    <!-- Jssor Slider End -->
-</div><!--ulises-->
-
-<!--FIN DE SLIDER-->
-
-<br>
-
-  <nav id="barramenu">
+<nav id="barramenu">
     <ul class="menu">
-      <li><a href="#" id="nav1"> INICIO</a></li>
-      <li><a href="#" id="nav2">HISTORIA</a></li>
-      <li><a href="#" id="nav3">VIDEOS</a></li>
-      <li><a href="#" id="nav4">ALBUM'S</a></li>
-      <li><a href="#" id="nav5">CARTA</a></li>
-      <li><a href="#" id="nav6">FINAL</a></li>
+      <li><a href="#" class="opcmenu" id="nav1">  INICIO</a></li>
+      <li><a href="#" class="opcmenu" id="nav2"> HISTORIA</a></li>
+      <li><a href="#" class="opcmenu" id="nav3"> ALBUM'S</a></li>
+      <li><a href="#" class="opcmenu" id="nav4"> CARTA</a></li>
 
     </ul>
   </nav>
 
-  <section class="pa1">
-    Hechos historios: 25 de Septiembre<br>
+
+
+<!--INICIO SLIDER-->
+
+ 
     
+<section class="ulises" >
+
+    <div class="carrucel">
+        <img src="imagenes/1.jpg" alt="" id="carucel1">
+        <img src="imagenes/2.jpg" alt="" id="carucel2">
+        <img src="imagenes/3.jpg" alt="" id="carucel3">
+        <img src="imagenes/4.jpg" alt="" id="carucel4">
+        <img src="imagenes/5.jpg" alt="" id="carucel5">
+        <img src="imagenes/6.jpg" alt="" id="carucel6">
+       
+    </div>
+</section>
+
+<!--FIN DE SLIDER-->
+<section class="pa1">
+    
+    <h2>Hechos historicos: <br>25 de Septiembre</h2>
     <article class="te1">
-      <h2 class="titulo1">
+       <h3 class="titulo1">
         1493
-      </h2>
+      </h3>
+      <!-- etiqueta de titulo  -->
+    <!--   <div class="con-titu">
+      <div class="cabecera">1493<span class="triangulo"></span></div>
+    </div> -->
+
+
+
       <figure class="img1">
-        <img src="imagenes/cristobal.PNG" alt="imagen 1">  
+        <img src="imagenes/cristobal.jpg" alt="imagen 1">  
       </figure>
       <p class="pt1">
       Cristóbal Colón emprende su segundo viaje al Nuevo mundo. El objetivo es explorar, colonizar y predicar la fe católica en los territorios descubiertos en el primer viaje. 
@@ -273,11 +84,15 @@ scale=1 maximum-scale=1" > ESTA ES LA OPCION DE MEJORANDO-->
     </article>
 
   <article class="te1">
-      <h2 class="titulo1">
+     <h3 class="titulo1">
         1945
-      </h2>
+      </h3>
+       <!--etiqueta de titulo-->
+      <!-- <div class="con-titu">
+        <div class="cabecera">1945<span class="triangulo"></span></div>
+      </div> -->
       <figure class="img1">
-        <img src="imagenes/plutarco.PNG" alt="imagen 1">  
+        <img src="imagenes/plutarco.jpg" alt="imagen 1">  
       </figure>
       <p class="pt1">
        Nace Plutarco Elías Calles, Jefe Máximo de la Revolución, 
@@ -288,11 +103,15 @@ scale=1 maximum-scale=1" > ESTA ES LA OPCION DE MEJORANDO-->
     </article>
     
      <article class="te1">
-      <h2 class="titulo1">
+       <h3 class="titulo1">
         1956
-      </h2>
+      </h3>
+      <!--etiqueta de titulo-->
+      <!-- <div class="con-titu">
+        <div class="cabecera">1956<span class="triangulo"></span></div>
+      </div> -->
       <figure class="img1">
-        <img src="imagenes/cable.PNG" alt="imagen 1">  
+        <img src="imagenes/cable.jpg" alt="imagen 1">  
       </figure>
       <p class="pt1">
   Entra en servicio el primer cable telefónico submarino transoceánico del mundo, que conecta a Terranova con Escocia, uniendo así Europa con América
@@ -301,75 +120,428 @@ scale=1 maximum-scale=1" > ESTA ES LA OPCION DE MEJORANDO-->
 
 
      <article class="te1">
-      <h2 class="titulo1">
+       <h3 class="titulo1">
         1995
-      </h2>
+      </h3>
+       <!--etiqueta de titulo-->
+      <!-- <div class="con-titu">
+        <div class="cabecera">1995<span class="triangulo"></span></div>
+      </div> -->
       <figure class="img1">
-        <img src="imagenes/chavo.PNG" alt="imagen 1">  
+        <img src="imagenes/chavo.jpg" alt="imagen 1">  
       </figure>
       <p class="pt1">
-        Es transmitido en television abierta, el ultimo capitulo del afamado comediante "Chespirito"
+        Transmitido en television abierta, el ultimo capitulo del afamado comediante "Chespirito"
       </p>
     </article>
 
      <article class="te1">
-      <h2 class="titulo1">
+       <h3 class="titulo1">
         2009
-      </h2>
+      </h3>
+       <!--etiqueta de titulo-->
+      <!-- <div class="con-titu">
+        <div class="cabecera">2009<span class="triangulo"></span></div>
+      </div> -->
       <figure class="img1">
-        <img src="imagenes/ulises.JPG" alt="imagen 1"
-        style="height: 300px; width: 250px">  
+        <img src="imagenes/ulises.jpg" alt="imagen 1"
+        style="height: 250px; width: 230px">  
       </figure>
       <p class="pt1">
 
-        Viernes 25 de septiembre, el joven  Ulises E. Cervantes Torres en aquel entonces estudiantes de la FIME, junto con su compañera de clases Angélica Toscano Ruiz, por voluntad propia y sin presión alguna, toman juntos una decisión  que cambiaría por siempre sus vidas:  Ser novios. Prometiéndose Amarse y respetarse, en la salud y en la enfermedad, en los tacos o comiendo sushi... 
-Juntos dieron a conocer esta gran noticia  al mundo entero por las redes sociales: Metroflog Y Facebook. Decisión que hasta hoy en día ha hecho muy feliz a esta pareja de personas que desde el primer día que se conocieron, supieron que fueron hechos el uno para el otro.
+        Viernes 25 de septiembre, el joven  Ulises E. Cervantes Torres en aquel entonces estudiantes de la FIME, junto con su compañera de clases Angélica Toscano Ruiz, por voluntad propia y sin presión alguna, toman juntos una decisión  que cambiaría por siempre sus vidas:  Ser novios. Prometiéndose Amarse y respetarse, en la salud y en la enfermedad, en los tacos o comiendo sushi...Juntos dieron a conocer esta gran noticia  al mundo entero por las redes sociales: Metroflog Y Facebook. Decisión que hasta hoy en día ha hecho muy feliz a esta pareja de personas que desde el primer día que se conocieron, supieron que fueron hechos el uno para el otro.
 
       </p>
     </article>
 
 
-  </section>
-
+</section>
+    
 <!--historia-->
 
-<section class="tabla">
+<section class="tabla" id="tabla">
+  <!-- 
+este boton es para ir a  al div historia, su fin es no hacer
+scroll para regresar  a el menu donde se encuentran las demas
+opciones -->
+<a href="#tabla" class="arriba">^</a> <!-- flecha para arriba -->
+
     <div class="wall">
-      <center><h2>Origenes!!</h2></center>
+      <img src="imagenes/papeltitu1.png" alt="" class="papeltitu">
         <article class="menu-historia">
-          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
-          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
-          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
-          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
-          <img src="imagenes/sticky3-a.png" alt="" class="stickys">
+          <img src="imagenes/year1.png" alt="" class="stickys" id="st1">
+          <img src="imagenes/year2.png" alt="" class="stickys" id="st2">
+          <img src="imagenes/year3.png" alt="" class="stickys" id="st3">
+          <img src="imagenes/year4.png" alt="" class="stickys" id="st4">
+          <img src="imagenes/year5.png" alt="" class="stickys" id="st5">
+        </article>
+    </div>
+
+  <!-- ONE YEAR-->
+      <article class="oneyear">
+        <div class="col">
+          
+          <h4>1° ANIVERSARIO</h4>
+          <br><br>
+          <img src="imagenes/marco1.jpg" alt="" class="oneyf1">
+          
+
+          <p class="oneyt1">El inicio de esta  de esta gran historia
+          </p>
+
+           <img src="imagenes/historia/1/2.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Y la escuela nos unio
+          </p>
+
+           <img src="imagenes/historia/1/3.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Contigo siempre hay tiempo para todo
+          </p>
+
+           <img src="imagenes/historia/1/4.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Mi meta en esta vida: Hacerte Feliz
+          </p>
+
+           <img src="imagenes/historia/1/5.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">En el rio
+          </p>
+
+           <img src="imagenes/historia/1/6.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">De nuestros lugares favoritos
+          </p>
+
+        </div>
+        <!--video-->
+        <div class="col">
+          <!--video-->
+            <div class="contenedor">
+                <iframe width="720" height="480" src="//www.youtube.com/embed/x0JSTZTcLJA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>El primer video que hize con todo cariNo para ti. Disfrutalo </p>
+        </div>
+        <!--video-->
+      </article>
+
+
+        <!--2-->
+        <article class="twoyear">
+            <div class="col">
+          <h4>2° ANIVERSARIO</h4>
+          <img src="imagenes/historia/2/1.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">En el rio de nuevo
+          </p>
+
+          <img src="imagenes/historia/2/2.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">En el ciber, momentos que jamas olvidare(como la caida por ejemplo)
+          </p>
+
+          <img src="imagenes/historia/2/3.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Por esas ganas inmensas de verte en el salon
+          </p>
+
+          <img src="imagenes/historia/2/4.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Contigo la felicidad es a todas horas
+          </p>
+
+          <img src="imagenes/historia/2/5.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Desde luego el sushi, algo que nos une
+          </p>
+
+          <img src="imagenes/historia/2/6.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">El fin de un ciclo en la FIME para un camino mejor
+          </p>
+        </div>
+        
+        <div class="col">
+          <!--video-->
+            <div class="contenedor">
+                <iframe width="720" height="480" src="//www.youtube.com/embed/Brcygx2ScW4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Si mal no recuerdo este hermoso video echo por ti, el mejor  </p>
+        </div>
         </article>
 
+
+      <!--3-->
+        <article class="threeyear">
+            <div class="col">
+          <h4>3° ANIVERSARIO</h4>
+          <img src="imagenes/historia/3/2.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Tus besos, indescriptibles
+          </p>
+      
+
+        <img src="imagenes/historia/3/1.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Por esas peliculas que jamas terminamos de ver
+          </p>
+
+          
+
+          <img src="imagenes/historia/3/3.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">Al derecho o al revez, Eres Perfecta
+          </p>
+
+          <img src="imagenes/historia/3/4.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">contigo por toda la eternidad
+          </p>
+
+          <img src="imagenes/historia/3/5.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Porque tu ropa, siempre me queda bien
+          </p>
+
+          <img src="imagenes/historia/3/6.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Y que el pan de nata nunca falte
+          </p>
+
+        </div>
+        <div class="col">
+          <!--video-->
+            <div class="contenedor">
+                <iframe width="720" height="480" src="//www.youtube.com/embed/al51fPC6BKk" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Ahora el turno me toco y aunque muchas veces no te guste "mi musica" siempre abra una que me recuerda a ti
+            </p>
+        </div>
+        </article>
+
+      <!--4-->
+        <article class="fouryear">
+            <div class="col">
+          <h4>4° ANIVERSARIO</h4>
+          <img src="imagenes/historia/4/1.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Simplemente, contigo soy feliz
+          </p>
+
+          <img src="imagenes/historia/4/2.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">En todo momento estare para ti
+          </p>
+
+          <img src="imagenes/historia/4/3.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">Sorprenderte a diario
+          </p>
+
+          <img src="imagenes/historia/4/4.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">Tu creatividad me llena de alegria
+          </p>
+
+          <img src="imagenes/historia/4/5.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Juntos hasta el fin
+          </p>
+
+          <img src="imagenes/historia/4/6.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Contigo a mi lado, todo es posible
+          </p>
+          <img src="imagenes/historia/4/7.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">El mercado 'La pulga' que nunca muera
+          </p>
+
+        </div>
+        <div class="col">
+          <!--video-->
+            <div class="contenedor">
+                <iframe width="720" height="480" src="//www.youtube.com/embed/SIhXGN0QzFc" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Por esos lugares que solo contigo quiero compartir y que solo con tu presencia las haces inolvidables</p>
+        </div>
+        </article>
+
+
+      <!--5-->
+        <article class="fiveyear">
+            <div class="col">
+          <h4>5° ANIVERSARIO</h4>
+           <img src="imagenes/historia/5/1.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">La pareja ideal
+          </p>
+           <img src="imagenes/historia/5/2.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Vamos por un hamburgueson?
+          </p>
+           <img src="imagenes/historia/5/3.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">La proxima es a la cumbre
+          </p>
+           <img src="imagenes/historia/5/4.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">Tu compaNia, la que siempre he esperado
+          </p>
+           <img src="imagenes/historia/5/5.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">El cielo es el limite
+          </p>
+           <img src="imagenes/historia/5/6.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">Lo mejor de mi vida eres tu
+          </p>
+           <img src="imagenes/historia/5/7.jpg" alt="" class="oneyf1 largas">
+          <p class="oneyt1">Improvisando de turistas
+          </p>
+           <img src="imagenes/historia/5/8.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">La siguiente sera en cancun
+          </p>
+           <img src="imagenes/historia/5/9.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Mi copilo Oficial
+          </p>
+           <img src="imagenes/historia/5/10.jpg" alt="" class="oneyf1">
+          <p class="oneyt1">Con o si retrica, tu, eres hermosa
+          </p>
+
+        </div>
+        <div class="col">
+          <!--video-->
+            <div class="contenedor">
+                <iframe width="720" height="480" src="//www.youtube.com/embed/a3eG2evI9aU" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Con todo el amor del mundo para ti. Que sean muchos mas.</p>
+        </div>
+        </article>
+</section>
+
+
+
+<section class="galeria">
     
-    </div>
-  </section>
+       <ul class="grande" >
+           <li id="slide1">
+              <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+               <a href="#" ><img src="imagenes/grandes/1.jpg" alt=""></a>
+               <span class="frase1">Mi cara cada vez que te veo</span>
+               
+           </li>
+           <li id="slide2">
+            <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+               <a href="#" ><img src="imagenes/grandes/2.jpg" alt=""></a>
+               <span class="frase2">Estas lista para la siguiente partida? </span>
 
+           </li> 
 
+           <li id="slide3">
+            <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+               <a href="#" ><img src="imagenes/grandes/3.jpg" alt=""></a>
+               <span class="frase3">Por esos lugares que contigo son magicos</span>
+           </li>
+           <li id="slide4">
+            <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+              <a href="#" ><img src="imagenes/grandes/4.jpg" alt=""></a>
+              <span class="frase4">Sin ti nada sabe igual</span>
+          </li>
+          <li id="slide5">
+            <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+              <a href="#" ><img src="imagenes/grandes/5.jpg" alt=""></a>
+              <span class="frase5">Solo lo mejor para ti</span>
+          </li>
+          <li id="slide6">
+            <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+              <a href="#" ><img src="imagenes/grandes/6.jpg" alt=""></a>
+              <span class="frase6">Solo pon la fecha</span>
+          </li>
+          <li id="slide7">
+            <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+              <a href="#" ><img src="imagenes/grandes/7.jpg" alt=""></a>
+              <span class="frase7">Pronto seremos tu y yo</span>
+          </li>
+          <li id="slide8">
+            <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+              <a href="#" ><img src="imagenes/grandes/8.jpg" alt=""></a>
+              <span class="frase8">Aun me lo debes</span>
+          </li>
 
-
-
-
- <footer>
-     <h3 class="powered">
+       </ul>
+ <ul class="chico">
+    <li>
+        <a href="#slide1" ><img src="imagenes/chicas/1.jpg" alt="">
+        </a>
         
-       <span class="mejor">Ulises.Cervantes.2014</span>
-    </h3>
+    </li>
+    <li>
+        <a href="#slide2" ><img src="imagenes/chicas/2.jpg" alt=""></a>
+    </li>
+    <li>
+        <a href="#slide3" ><img src="imagenes/chicas/3.jpg" alt=""></a>
+    </li>
+    <li>
+       <a href="#slide4" ><img src="imagenes/chicas/4.jpg" alt=""></a>
+    </li>
+    <li>
+        <a href="#slide5" ><img src="imagenes/chicas/5.jpg" alt=""></a>
+        
+    </li>
+    <li>
+        <a href="#slide6" ><img src="imagenes/chicas/6.jpg" alt=""></a>
+    </li>
+    <li>
+        <a href="#slide7" ><img src="imagenes/chicas/7.jpg" alt=""></a>
+    </li>
+    <li class="last-img-ch">
+        <a  href="#slide8" ><img src="imagenes/chicas/8.jpg" alt=""></a>
+    </li>
+     </ul>
+   
+</section>
+
+
+<section class="carta">
+  <div class="espacio"></div> <!-- esto es para hacer espacio y el header no se sobre ponga  ala imagen -->
+  <div class="separador">
+    <img src="imagenes/img-carta.jpg" alt="">
+        <div class="txtcarta">
+          <p class="parrafo-0">Hoy<br> es un día  especial para nosotros…</p>
+          
+          <p class="parrafo-1">
+          Me siento muy <span class="rojos">Enamorado</span>,
+          igual o más  que en aquel día que 
+          por primera vez te mire a los ojos</p> 
+
+          
+          <p class="parrafo-1a">Eres esa persona especial, esa <span class="rojos">mujer</span>  con la que siempre estuve soñando tener  a mi lado.
+          </p>
+          
+          
+          <p class="parrafo-2"><!-- <span class="rojo"></span> -->
+          aveces tenemos nuestros problemas, pero sé que juntos siempre podremos solucionarlos,  porque no importa el motivo <span class="negritas">siempre estaremos uno al lado del otro</span> .
+          </p>
+
+          <p class="parrafo-3">
+
+          A lo largo de estos <span class="rojos">5 años</span> </p>
+
+          <p class="negritas2">me has dado <span class="subra">la fuerza que necesito</span> esas ganar de salir adelante. Porque tú eres el motivo por el cual cada mañana en mí se dibuja una </p>
+          
+
+          <p class="parrafo-2">
+          <span class="negritas">Eh dado mil vueltas al</span> <span class="mundo"></span><br> para encontrar las palaras que digan todo lo que hoy por ti siento, y  entre todo las frases  la mejor es <span class="amo3">Te amo </span>, si Angie
+          </p>
+          <span class="amo4">TE AMO!</span>
+          
+          <p class="parrafo-5">
+          <span class="amo1">AMO tu sonrisa</span><br>
+          <span class="amo2">AMO tu mirada</span> <br>
+          <span class="amo3">AMO todo en ti</span><br>
+           Eres una gran amiga,  EXCELENTE NOVIA y lo que pronto también espero es que te conviertas en <span class="negritas"> la mujer que me acompañe a lo largo de mi vida.</span> 
+          </p>
+           
+          <p class="parrafo-6">
+          Te amo, y <span class="rojos2">este amor</span> te juro será por <span class="rojos2">siempre</span>
+          </p>  
+          <p class="pultimo">Tu amor</p>
+          <img class="corazones"SRC="imagenes/corazones.gif">
+          <span class="parrafo-7">Ulises E. Cervantes Torres</span>
+
+
+
+        </div>
+   </div>
+
+</section>
+
+ <footer>    
+       <!-- <span class="mejor">Ulises.Cervantes.2014</span> -->
+       
+    
     <div class="aulises">
-        <figure>
-            <a href="https://www.facebook.com/cervantestorres" target="_blank"><img src="imagenes/logo_fb.png"  title="FACEBOOK"></a>
-        </figure>
-        <figure>
-             <a href="https://github.com/ulisescerv91/" target="_blank"  title="GITHUB"><img src="imagenes/logo_github.png"></a>
-        </figure>
-        <figure>
-             <a href="https://twitter.com/k4ngr1" target="_blank" title="TWITTER" ><img src="imagenes/logo_t.png"></a>
-        </figure>
+            <a href="https://www.facebook.com/cerv  antestorres" target="_blank" class="fot1"></a> 
+            Ulises.Cervantes.2014
+             <a href="https://github.com/ulisescerv91/" target="_blank"  title="GITHUB" class="fot2"></a> 
+             
+        
         
     </div>
+
+
 </footer>
 </body>
 </html>
